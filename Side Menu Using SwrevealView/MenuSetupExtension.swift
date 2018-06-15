@@ -20,6 +20,8 @@ extension UIViewController: SWRevealViewControllerDelegate {
     }
     
     public func revealController(_ revealController: SWRevealViewController!, willMoveTo position: FrontViewPosition) {
+                self.view.endEditing(true)
+
         if case .right = position {
             
             let dimmingView = UIView(frame: view.frame)
